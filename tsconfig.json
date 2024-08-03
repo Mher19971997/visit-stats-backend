@@ -1,0 +1,40 @@
+{
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "module": "CommonJS",
+    "declaration": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "paths": {
+      "@visit_stats_backend/src": ["src"],
+      "@visit_stats_backend/src/*": ["src/*"],
+      "@visit_stats_backend/migration": ["migration"],
+      "@visit_stats_backend/migration/*": ["migration/*"],
+      "@visit_stats_backend/configuration": ["configuration"],
+      "@visit_stats_backend/configuration/*": ["configuration/*"],
+      "@visit_stats_backend/src/auth": ["src/auth"],
+      "@visit_stats_backend/src/auth/*": ["src/auth/*"],
+      "@visit_stats_backend/src/user": ["src/user"],
+      "@visit_stats_backend/src/user/*": ["src/user/*"],
+      "@visit_stats_backend/shared": ["libs/shared"],
+      "@visit_stats_backend/shared/*": ["libs/shared/*"],
+      "@visit_stats_backend/service": ["libs/service"],
+      "@visit_stats_backend/service/*": ["libs/service/*"]
+    }
+  }
+}
