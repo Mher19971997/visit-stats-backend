@@ -30,8 +30,10 @@ export class CountriesAnalyticsService extends CommonService<
   }
 
   async createCountry(inputDto: countriesAnalyticDto.inputs.CreateCountriesAnalyticInput,) {
-    await this.upsertCatchCountry(inputDto)
-    return super.create(inputDto);
+    const uppercaseCountry = inputDto.country?.toUpperCase();
+
+    await this.upsertCatchCountry({ country: uppercaseCountry })
+    return super.create({ country: uppercaseCountry });
   }
 
   async findAllByCatch(filterDto: countriesAnalyticDto.inputs.FilterCountriesAnalyticInput) {
@@ -46,6 +48,7 @@ export class CountriesAnalyticsService extends CommonService<
         'country',
         [fn('COUNT', literal('1')), 'count'],
       ],
+      ...filterDto,
       group: [
         literal(`TO_CHAR("createdAt", ${timeObj.format})::text`) as any,
         'country',
