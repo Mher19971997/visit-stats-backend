@@ -30,7 +30,7 @@ export class CountriesAnalyticsService extends CommonService<
   }
 
   async createCountry(inputDto: countriesAnalyticDto.inputs.CreateCountriesAnalyticInput,) {
-    const uppercaseCountry = inputDto.country?.toUpperCase();
+    const uppercaseCountry = inputDto.country?.toLowerCase();
 
     await this.upsertCatchCountry({ country: uppercaseCountry })
     return super.create({ country: uppercaseCountry });
