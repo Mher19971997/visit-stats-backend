@@ -44,7 +44,7 @@
   },
     queue: {
       amqp: {
-        url: "amqp://rabbitmq:rB4dRlyn32FGSth7XdH33MEwWSYZgf70B@rabbitmq"
+        url:"amqp://rabbitmq:rB4dRlyn32FGSth7XdH33MEwWSYZgf70B@rabbitmq:5672"
       },
   },
   crypto: {
