@@ -21,7 +21,7 @@
   transports: ['http', 'tcp'],
   db: {
     postgres: {
-      url: 'postgresql://postgres:rB4dRlyn38F75Sg13Xd5iNM1wfSYZY708gh@postgres:5433/dev',
+      url: 'postgresql://postgres:rB4dRlyn38F75Sg13Xd5iNM1wfSYZY708gh@postgres:5432/dev',
       logging: 'debug',
       dialect: 'postgres',
       database: 'dev',
